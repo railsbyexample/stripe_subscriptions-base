@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Stripe::Plan.list['data'].each do |plan|
+  next if Plan.exists?(stripe_id: plan['id'])
+
+  Plan.create \
+    stripe_id: plan['id'],
+    name: plan['nickname'],
+    interval: plan['interval'],
+    amount: plan['amount']
+end

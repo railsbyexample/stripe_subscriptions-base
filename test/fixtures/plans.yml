@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+small_monthly:
+  name: Small
+  amount: 2500
+  interval: month
+  stripe_id: small-monthly
+
+large_monthly:
+  name: Large
+  amount: 10000
+  interval: month
+  stripe_id: large-monthly

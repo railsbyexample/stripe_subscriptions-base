@@ -1,0 +1,21 @@
+<div class="page-header">
+  <%= link_to movies_path, class: 'btn btn-default' do %>
+    All Movies
+  <% end %>
+  <%= link_to edit_movie_path(@movie), class: 'btn btn-primary' do %>
+    Edit
+  <% end %>
+  <h1>Show movie</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Title:</dt>
+  <dd><%= @movie.title %></dd>
+
+  <% if user_signed_in? && current_user.subscribed? %>
+    <dt>Video url:</dt>
+    <dd><%= @movie.video_url %></dd>
+  <% else %>
+    <%= link_to 'Subscribe to watch', pricing_path, class: 'btn btn-primary' %>
+  <% end %>
+</dl>

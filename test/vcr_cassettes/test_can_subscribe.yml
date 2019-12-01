@@ -1,0 +1,328 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session
+    body:
+      encoding: UTF-8
+      string: '{"desiredCapabilities":{"browserName":"chrome","version":"","platform":"ANY","javascriptEnabled":true,"cssSelectorsEnabled":true,"takesScreenshot":false,"nativeEvents":false,"rotatable":false},"capabilities":{"firstMatch":[{"browserName":"chrome"}]}}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.6 (ruby macosx)
+      Content-Length:
+      - '250'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '688'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"79.0.3945.29","chrome":{"chromedriverVersion":"79.0.3945.16
+        (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262})","userDataDir":"/var/folders/rl/rylgrks156g9xl74z816kt9h0000gn/T/.com.google.Chrome.6lYqOe"},"goog:chromeOptions":{"debuggerAddress":"localhost:57351"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"mac
+        os x","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss
+        and notify"},"sessionId":"ca0f9eddd5a78cbc0bdc8321ee1ec16e"}}'
+    http_version: 
+  recorded_at: Tue, 12 Nov 2019 20:28:55 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/ca0f9eddd5a78cbc0bdc8321ee1ec16e/window/rect
+    body:
+      encoding: UTF-8
+      string: '{"x":null,"y":null,"width":1400,"height":1400}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.6 (ruby macosx)
+      Content-Length:
+      - '46'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '51'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":{"height":777,"width":1400,"x":22,"y":23}}'
+    http_version: 
+  recorded_at: Tue, 12 Nov 2019 20:28:55 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:57360/__identify__
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+    body:
+      encoding: UTF-8
+      string: '70151923961360'
+    http_version: 
+  recorded_at: Tue, 12 Nov 2019 20:28:56 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/ca0f9eddd5a78cbc0bdc8321ee1ec16e/url
+    body:
+      encoding: UTF-8
+      string: '{"url":"http://127.0.0.1:57360/subscription/new.632167446"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.6 (ruby macosx)
+      Content-Length:
+      - '59'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":null}'
+    http_version: 
+  recorded_at: Tue, 12 Nov 2019 20:29:05 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/ca0f9eddd5a78cbc0bdc8321ee1ec16e/window/handles
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.6 (ruby macosx)
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '55'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":["CDwindow-E9159482B878436D1BC31A18AF4816A9"]}'
+    http_version: 
+  recorded_at: Tue, 12 Nov 2019 20:29:23 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/ca0f9eddd5a78cbc0bdc8321ee1ec16e/window
+    body:
+      encoding: UTF-8
+      string: '{"handle":"CDwindow-E9159482B878436D1BC31A18AF4816A9"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.6 (ruby macosx)
+      Content-Length:
+      - '54'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":null}'
+    http_version: 
+  recorded_at: Tue, 12 Nov 2019 20:29:23 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/ca0f9eddd5a78cbc0bdc8321ee1ec16e/window/handles
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.6 (ruby macosx)
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '55'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":["CDwindow-E9159482B878436D1BC31A18AF4816A9"]}'
+    http_version: 
+  recorded_at: Tue, 12 Nov 2019 20:29:23 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/ca0f9eddd5a78cbc0bdc8321ee1ec16e/url
+    body:
+      encoding: UTF-8
+      string: '{"url":"about:blank"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.6 (ruby macosx)
+      Content-Length:
+      - '21'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":null}'
+    http_version: 
+  recorded_at: Tue, 12 Nov 2019 20:29:24 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/ca0f9eddd5a78cbc0bdc8321ee1ec16e/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":"/html/body/*"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.6 (ruby macosx)
+      Content-Length:
+      - '40'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '12'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":[]}'
+    http_version: 
+  recorded_at: Tue, 12 Nov 2019 20:29:24 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/ca0f9eddd5a78cbc0bdc8321ee1ec16e/goog/cdp/execute
+    body:
+      encoding: UTF-8
+      string: '{"cmd":"Storage.clearDataForOrigin","params":{"origin":"*","storageTypes":"cookies,local_storage"}}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.6 (ruby macosx)
+      Content-Length:
+      - '99'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '12'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":{}}'
+    http_version: 
+  recorded_at: Tue, 12 Nov 2019 20:29:24 GMT
+recorded_with: VCR 5.0.0

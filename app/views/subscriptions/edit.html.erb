@@ -1,0 +1,20 @@
+<h1 class="text-center mb-4">Change your plan</h1>
+
+<div class="d-flex justify-content-center">
+  <% @plans.each do |plan| %>
+    <div class="col-sm-3">
+      <h5><%= plan.name %></h5>
+      <h2><%= formatted_amount plan.amount %></h2>
+      <div class="mb-3 text-muted">Per <%= plan.interval %></div>
+
+      <% if plan.stripe_id == @subscription.stripe_plan %>
+        <div class="btn btn-secondary">Current plan</div>
+      <% else %>
+        <%= link_to 'Switch plan', subscription_path(plan_id: plan.id),
+              method: :patch,
+              data: { confirm: 'Sure?' },
+              class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
